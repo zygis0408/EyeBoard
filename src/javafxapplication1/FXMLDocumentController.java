@@ -116,7 +116,28 @@ public class FXMLDocumentController implements Initializable {
     private AnchorPane phrasesPane;
     @FXML
     private AnchorPane settingsPane;
+    @FXML
+    private Button buttonEnglish;
+    @FXML
+    private Button buttonDanish;
+    @FXML
+    private Button buttonGerman;
     private Timer timer;
+
+//    @FXML
+//    private void handleLanguage(Event event) {
+//        onKey = true;
+//        timer = new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                if (onKey) {
+//                    
+//                    timer.cancel();
+//                }
+//            }
+//        }, 2000);
+//    }
 
     @FXML
     private void handleKeyAction(Event event) {
