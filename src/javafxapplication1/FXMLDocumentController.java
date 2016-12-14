@@ -168,10 +168,10 @@ public class FXMLDocumentController implements Initializable {
                     javafx.application.Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            keyboard.setText("KeyboardDD");
-                            settings.setText("SettingsDD");
-                            phrases.setText("PhrasesDD");
-                            langLabel.setText("LanguageDD");
+                            keyboard.setText("Tastatur");
+                            settings.setText("Indstillinger");
+                            phrases.setText("Sætninger");
+                            langLabel.setText("Sprog");
                             english = false;
                             danish = true;
                             german = false;
@@ -195,10 +195,10 @@ public class FXMLDocumentController implements Initializable {
                     javafx.application.Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            keyboard.setText("KeyboardGG");
-                            settings.setText("SettingsGG");
-                            phrases.setText("PhrasesGG");
-                            langLabel.setText("LanguageGG");
+                            keyboard.setText("Tastatur");
+                            settings.setText("Einstellungen");
+                            phrases.setText("Phrase");
+                            langLabel.setText("Sprache");
                             english = false;
                             danish = false;
                             german = true;
