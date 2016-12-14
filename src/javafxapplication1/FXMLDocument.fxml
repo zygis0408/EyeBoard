@@ -8,9 +8,9 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLDocumentController">
    <children>
-      <Button fx:id="phrases" layoutX="-0.0" layoutY="200.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Phrases" />
-      <Button fx:id="settings" layoutX="-0.0" layoutY="400.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Settings" />
-      <Button fx:id="keyboard" layoutX="-0.0" layoutY="-0.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Keyboard" />
+      <Button fx:id="phrases" layoutX="-0.0" layoutY="200.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Phrases" AnchorPane.leftAnchor="0.0" />
+      <Button fx:id="settings" layoutX="-0.0" layoutY="400.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Settings" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <Button fx:id="keyboard" layoutX="-0.0" layoutY="-0.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Keyboard" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="num6" layoutX="608.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="6" />
       <Button fx:id="num8" layoutX="748.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="8" />
       <Button fx:id="keyB" layoutX="678.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="B" />
@@ -50,6 +50,6 @@
       <Button fx:id="keySpace" layoutX="258.0" layoutY="520.0" minHeight="60.0" minWidth="690.0" mnemonicParsing="false" onMouseEntered="#handleSpace" onMouseExited="#pointerExitedKey" text="Space" />
       <Button fx:id="keyCaps" layoutX="258.0" layoutY="450.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onMouseEntered="#handleCapsLock" onMouseExited="#pointerExitedKey" text="Caps Lock" />
       <Button fx:id="keyEnter" layoutX="888.0" layoutY="380.0" minHeight="130.0" minWidth="60.0" mnemonicParsing="false" text="Enter" />
-      <TextArea fx:id="text" layoutX="258.0" layoutY="51.0" prefHeight="130.0" prefWidth="690.0" wrapText="true" />
+      <TextArea fx:id="text" layoutX="258.0" layoutY="51.0" prefHeight="130.0" prefWidth="690.0" wrapText="true" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="51.0" />
    </children>
 </AnchorPane>
