@@ -144,7 +144,7 @@ public class FXMLDocumentController implements Initializable {
                             keyboard.setText("Keyboard");
                             settings.setText("Settings");
                             phrases.setText("Phrases");
-                            langLabel.setText("Language");
+                            langLabel.setText("Language:");
                             english = true;
                             danish = false;
                             german = false;
@@ -171,7 +171,7 @@ public class FXMLDocumentController implements Initializable {
                             keyboard.setText("Tastatur");
                             settings.setText("Indstillinger");
                             phrases.setText("Sætninger");
-                            langLabel.setText("Sprog");
+                            langLabel.setText("Sprog:");
                             english = false;
                             danish = true;
                             german = false;
@@ -198,7 +198,7 @@ public class FXMLDocumentController implements Initializable {
                             keyboard.setText("Tastatur");
                             settings.setText("Einstellungen");
                             phrases.setText("Phrase");
-                            langLabel.setText("Sprache");
+                            langLabel.setText("Sprache:");
                             english = false;
                             danish = false;
                             german = true;

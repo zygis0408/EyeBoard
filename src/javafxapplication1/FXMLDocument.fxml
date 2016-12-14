@@ -56,10 +56,15 @@
         <AnchorPane fx:id="settingsPane" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
             <Button fx:id="buttonEnglish" layoutX="380.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="English" onMouseEntered="#handleLanguageEng" onMouseExited="#pointerExitedKey"/>
-            <Button fx:id="buttonDanish" layoutX="500.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Danish" onMouseEntered="#handleLanguageDan" onMouseExited="#pointerExitedKey"/>
-            <Button fx:id="buttonGerman" layoutX="620.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="German" onMouseEntered="#handleLanguageGer" onMouseExited="#pointerExitedKey"/>
-            <Label fx:id="langLabel" layoutX="300.0" layoutY="100.0" text="Language" />
-         </children></AnchorPane>
+            <Button fx:id="buttonDanish" layoutX="500.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Dansk" onMouseEntered="#handleLanguageDan" onMouseExited="#pointerExitedKey"/>
+            <Button fx:id="buttonGerman" layoutX="620.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Deutsch" onMouseEntered="#handleLanguageGer" onMouseExited="#pointerExitedKey"/>
+            <Label fx:id="langLabel" layoutX="300.0" layoutY="100.0" text="Language:" />
+            <Button fx:id="buttonSmall" layoutX="380.0" layoutY="180.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Small"  onMouseExited="#pointerExitedKey"/>
+            <Button fx:id="buttonMedium" layoutX="500.0" layoutY="180.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Medium"  onMouseExited="#pointerExitedKey"/>
+            <Button fx:id="buttonLarge" layoutX="620.0" layoutY="180.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Large" onMouseExited="#pointerExitedKey"/>
+          <Label fx:id="fontLabel" layoutX="300.0" layoutY="220.0" text="Font size:" />
+         </children>
+        </AnchorPane>
         <Button fx:id="settings" layoutY="400.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handleSettingsKey" onMouseExited="#pointerExitedKey" text="Settings" />
         <Button fx:id="phrases" layoutY="200.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handlePhrasesKey" onMouseExited="#pointerExitedKey" text="Phrases" />
         <Button fx:id="keyboard" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handleKeyboardKey" onMouseExited="#pointerExitedKey" text="Keyboard" />
