@@ -111,18 +111,16 @@ public class FXMLDocumentController implements Initializable {
     private TextArea text;
     private Timer timer;
 
-    public FXMLDocumentController() {
-        this.timer = new Timer();
-    }
-
     @FXML
     private void handleKeyAction(Event event) {
         onKey = true;
+        timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 if (onKey) {
                     text.appendText(String.valueOf(event.getSource().toString().charAt(35)));
+                    timer.cancel();
                 }
             }
         }, 2000);
@@ -131,11 +129,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleSpace(Event event) {
         onKey = true;
+        timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 if (onKey) {
                     text.appendText(" ");
+                    timer.cancel();
                 }
             }
         }, 2000);
@@ -144,6 +144,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleCapsLock(Event event) {
         onKey = true;
+        timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -178,7 +179,8 @@ public class FXMLDocumentController implements Initializable {
                                 keyW.setText("w");
                                 keyX.setText("x");
                                 keyY.setText("y");
-                                keyZ.setText("z");
+                                keyZ.setText("z");                    
+                                timer.cancel();
                             }
                         });
                     } else {
@@ -212,7 +214,8 @@ public class FXMLDocumentController implements Initializable {
                                 keyW.setText("W");
                                 keyX.setText("X");
                                 keyY.setText("Y");
-                                keyZ.setText("Z");
+                                keyZ.setText("Z");                    
+                                timer.cancel();
                             }
                         });
                     }
@@ -226,7 +229,6 @@ public class FXMLDocumentController implements Initializable {
     private void pointerExitedKey(Event event) {
         onKey = false;
         timer.cancel();
-        timer = new Timer();
     }
 
     @Override
