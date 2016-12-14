@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 
 /**
  *
@@ -109,6 +110,12 @@ public class FXMLDocumentController implements Initializable {
     private Button keyCaps;
     @FXML
     private TextArea text;
+    @FXML
+    private AnchorPane keyboardPane;
+    @FXML
+    private AnchorPane phrasesPane;
+    @FXML
+    private AnchorPane settingsPane;
     private Timer timer;
 
     @FXML
@@ -153,7 +160,7 @@ public class FXMLDocumentController implements Initializable {
                         javafx.application.Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
-                                caps=false;
+                                caps = false;
                                 keyA.setText("a");
                                 keyB.setText("b");
                                 keyC.setText("c");
@@ -179,7 +186,7 @@ public class FXMLDocumentController implements Initializable {
                                 keyW.setText("w");
                                 keyX.setText("x");
                                 keyY.setText("y");
-                                keyZ.setText("z");                    
+                                keyZ.setText("z");
                                 timer.cancel();
                             }
                         });
@@ -188,7 +195,7 @@ public class FXMLDocumentController implements Initializable {
                         javafx.application.Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
-                                caps=true;
+                                caps = true;
                                 keyA.setText("A");
                                 keyB.setText("B");
                                 keyC.setText("C");
@@ -214,7 +221,7 @@ public class FXMLDocumentController implements Initializable {
                                 keyW.setText("W");
                                 keyX.setText("X");
                                 keyY.setText("Y");
-                                keyZ.setText("Z");                    
+                                keyZ.setText("Z");
                                 timer.cancel();
                             }
                         });
@@ -222,7 +229,61 @@ public class FXMLDocumentController implements Initializable {
                 }
             }
         },
-                 2000);
+                2000);
+    }
+
+    @FXML
+    private void handleKeyboardKey(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    keyboardPane.setVisible(true);
+                    phrasesPane.setVisible(false);
+                    settingsPane.setVisible(false);
+                    timer.cancel();
+                }
+            }
+        }, 2000);
+
+    }
+
+    @FXML
+    private void handlePhrasesKey(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    keyboardPane.setVisible(false);
+                    phrasesPane.setVisible(true);
+                    settingsPane.setVisible(false);
+                    timer.cancel();
+                }
+            }
+        }, 2000);
+
+    }
+
+    @FXML
+    private void handleSettingsKey(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    keyboardPane.setVisible(false);
+                    phrasesPane.setVisible(false);
+                    settingsPane.setVisible(true);
+                    timer.cancel();
+                }
+            }
+        }, 2000);
+
     }
 
     @FXML

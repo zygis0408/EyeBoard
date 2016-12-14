@@ -8,48 +8,54 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLDocumentController">
    <children>
-      <Button fx:id="phrases" layoutX="-0.0" layoutY="200.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Phrases" AnchorPane.leftAnchor="0.0" />
-      <Button fx:id="settings" layoutX="-0.0" layoutY="400.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Settings" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
-      <Button fx:id="keyboard" layoutX="-0.0" layoutY="-0.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" text="Keyboard" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="num6" layoutX="608.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="6" />
-      <Button fx:id="num8" layoutX="748.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="8" />
-      <Button fx:id="keyB" layoutX="678.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="B" />
-      <Button fx:id="num1" layoutX="258.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="1" />
-      <Button fx:id="num9" layoutX="818.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="9" />
-      <Button fx:id="num0" layoutX="888.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="0" />
-      <Button fx:id="num5" layoutX="538.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="5" />
-      <Button fx:id="num4" layoutX="468.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="4" />
-      <Button fx:id="num2" layoutX="328.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="2" />
-      <Button fx:id="num7" layoutX="678.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="7" />
-      <Button fx:id="num3" layoutX="398.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="3" />
-      <Button fx:id="keyZ" layoutX="398.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Z" />
-      <Button fx:id="keyX" layoutX="468.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="X" />
-      <Button fx:id="keyC" layoutX="538.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="C" />
-      <Button fx:id="keyL" layoutX="818.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="L" />
-      <Button fx:id="keyK" layoutX="748.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="K" />
-      <Button fx:id="keyJ" layoutX="678.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="J" />
-      <Button fx:id="keyF" layoutX="468.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="F" />
-      <Button fx:id="keyG" layoutX="538.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="G" />
-      <Button fx:id="keyH" layoutX="608.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="H" />
-      <Button fx:id="keyS" layoutX="328.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="S" />
-      <Button fx:id="keyD" layoutX="398.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="D" />
-      <Button fx:id="keyO" layoutX="818.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="O" />
-      <Button fx:id="keyI" layoutX="748.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="I" />
-      <Button fx:id="keyP" layoutX="888.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="P" />
-      <Button fx:id="keyA" layoutX="258.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="A" />
-      <Button fx:id="keyU" layoutX="678.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="U" />
-      <Button fx:id="keyY" layoutX="608.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Y" />
-      <Button fx:id="keyR" layoutX="468.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="R" />
-      <Button fx:id="keyT" layoutX="538.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="T" />
-      <Button fx:id="keyE" layoutX="398.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="E" />
-      <Button fx:id="keyW" layoutX="328.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="W" />
-      <Button fx:id="keyQ" layoutX="258.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Q" />
-      <Button fx:id="keyV" layoutX="608.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="V" />
-      <Button fx:id="keyN" layoutX="748.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="N" />
-      <Button fx:id="keyM" layoutX="818.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="M" />
-      <Button fx:id="keySpace" layoutX="258.0" layoutY="520.0" minHeight="60.0" minWidth="690.0" mnemonicParsing="false" onMouseEntered="#handleSpace" onMouseExited="#pointerExitedKey" text="Space" />
-      <Button fx:id="keyCaps" layoutX="258.0" layoutY="450.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onMouseEntered="#handleCapsLock" onMouseExited="#pointerExitedKey" text="Caps Lock" />
-      <Button fx:id="keyEnter" layoutX="888.0" layoutY="380.0" minHeight="130.0" minWidth="60.0" mnemonicParsing="false" text="Enter" />
-      <TextArea fx:id="text" layoutX="258.0" layoutY="51.0" prefHeight="130.0" prefWidth="690.0" wrapText="true" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="51.0" />
+      <AnchorPane fx:id="keyboardPane" maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Button fx:id="num6" layoutX="608.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="6" />
+            <Button fx:id="num8" layoutX="748.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="8" />
+            <Button fx:id="keyB" layoutX="678.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="B" />
+            <Button fx:id="num1" layoutX="258.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="1" />
+            <Button fx:id="num9" layoutX="818.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="9" />
+            <Button fx:id="num0" layoutX="888.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="0" />
+            <Button fx:id="num5" layoutX="538.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="5" />
+            <Button fx:id="num4" layoutX="468.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="4" />
+            <Button fx:id="num2" layoutX="328.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="2" />
+            <Button fx:id="num7" layoutX="678.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="7" />
+            <Button fx:id="num3" layoutX="398.0" layoutY="240.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="3" />
+            <Button fx:id="keyZ" layoutX="398.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Z" />
+            <Button fx:id="keyX" layoutX="468.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="X" />
+            <Button fx:id="keyC" layoutX="538.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="C" />
+            <Button fx:id="keyL" layoutX="818.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="L" />
+            <Button fx:id="keyK" layoutX="748.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="K" />
+            <Button fx:id="keyJ" layoutX="678.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="J" />
+            <Button fx:id="keyF" layoutX="468.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="F" />
+            <Button fx:id="keyG" layoutX="538.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="G" />
+            <Button fx:id="keyH" layoutX="608.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="H" />
+            <Button fx:id="keyS" layoutX="328.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="S" />
+            <Button fx:id="keyD" layoutX="398.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="D" />
+            <Button fx:id="keyO" layoutX="818.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="O" />
+            <Button fx:id="keyI" layoutX="748.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="I" />
+            <Button fx:id="keyP" layoutX="888.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="P" />
+            <Button fx:id="keyA" layoutX="258.0" layoutY="380.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="A" />
+            <Button fx:id="keyU" layoutX="678.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="U" />
+            <Button fx:id="keyY" layoutX="608.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Y" />
+            <Button fx:id="keyR" layoutX="468.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="R" />
+            <Button fx:id="keyT" layoutX="538.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="T" />
+            <Button fx:id="keyE" layoutX="398.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="E" />
+            <Button fx:id="keyW" layoutX="328.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="W" />
+            <Button fx:id="keyQ" layoutX="258.0" layoutY="310.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="Q" />
+            <Button fx:id="keyV" layoutX="608.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="V" />
+            <Button fx:id="keyN" layoutX="748.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="N" />
+            <Button fx:id="keyM" layoutX="818.0" layoutY="450.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onMouseEntered="#handleKeyAction" onMouseExited="#pointerExitedKey" text="M" />
+            <Button fx:id="keySpace" layoutX="258.0" layoutY="520.0" minHeight="60.0" minWidth="690.0" mnemonicParsing="false" onMouseEntered="#handleSpace" onMouseExited="#pointerExitedKey" text="Space" />
+            <Button fx:id="keyCaps" layoutX="258.0" layoutY="450.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onMouseEntered="#handleCapsLock" onMouseExited="#pointerExitedKey" text="Caps Lock" />
+            <Button fx:id="keyEnter" layoutX="888.0" layoutY="380.0" minHeight="130.0" minWidth="60.0" mnemonicParsing="false" text="Enter" />
+            <TextArea fx:id="text" layoutX="258.0" layoutY="51.0" prefHeight="130.0" prefWidth="690.0" wrapText="true" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="51.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="phrasesPane" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane fx:id="settingsPane" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="settings" layoutY="400.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handleSettingsKey" onMouseExited="#pointerExitedKey" text="Settings" />
+      <Button fx:id="phrases" layoutY="200.0" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handlePhrasesKey" onMouseExited="#pointerExitedKey" text="Phrases" />
+      <Button fx:id="keyboard" minHeight="200.0" minWidth="200.0" mnemonicParsing="false" onMouseEntered="#handleKeyboardKey" onMouseExited="#pointerExitedKey" text="Keyboard" />
    </children>
-</AnchorPane>
+</Pane>
