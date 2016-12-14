@@ -13,6 +13,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
@@ -22,8 +23,13 @@ import javafx.scene.layout.AnchorPane;
  */
 public class FXMLDocumentController implements Initializable {
 
+    private boolean english = true;
+    private boolean danish = false;
+    private boolean german = false;
     private boolean caps = true;
     private boolean onKey = false;
+    @FXML
+    private Label langLabel;
     @FXML
     private Button keyboard;
     @FXML
@@ -124,20 +130,85 @@ public class FXMLDocumentController implements Initializable {
     private Button buttonGerman;
     private Timer timer;
 
-//    @FXML
-//    private void handleLanguage(Event event) {
-//        onKey = true;
-//        timer = new Timer();
-//        timer.schedule(new TimerTask() {
-//            @Override
-//            public void run() {
-//                if (onKey) {
-//                    
-//                    timer.cancel();
-//                }
-//            }
-//        }, 2000);
-//    }
+    @FXML
+    private void handleLanguageEng(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            keyboard.setText("Keyboard");
+                            settings.setText("Settings");
+                            phrases.setText("Phrases");
+                            langLabel.setText("Language");
+                            english = true;
+                            danish = false;
+                            german = false;
+                            timer.cancel();
+                        }
+
+                    });
+                }
+            }
+        }, 2000);
+    }
+
+    @FXML
+    private void handleLanguageDan(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            keyboard.setText("KeyboardDD");
+                            settings.setText("SettingsDD");
+                            phrases.setText("PhrasesDD");
+                            langLabel.setText("LanguageDD");
+                            english = false;
+                            danish = true;
+                            german = false;
+                            timer.cancel();
+                        }
+                    }
+                    );
+                }
+            }
+        }, 2000);
+    }
+
+    @FXML
+    private void handleLanguageGer(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            keyboard.setText("KeyboardGG");
+                            settings.setText("SettingsGG");
+                            phrases.setText("PhrasesGG");
+                            langLabel.setText("LanguageGG");
+                            english = false;
+                            danish = false;
+                            german = true;
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        }, 2000);
+    }
 
     @FXML
     private void handleKeyAction(Event event) {
