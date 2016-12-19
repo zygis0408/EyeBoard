@@ -28,6 +28,13 @@ public class FXMLDocumentController implements Initializable {
     private boolean german = false;
     private boolean caps = true;
     private boolean onKey = false;
+
+    @FXML
+    private Button buttonSmall;
+    @FXML
+    private Button buttonMedium;
+    @FXML
+    private Button buttonLarge;
     @FXML
     private Label fontLabel;
     @FXML
@@ -148,6 +155,9 @@ public class FXMLDocumentController implements Initializable {
                             phrases.setText("Phrases");
                             langLabel.setText("Language:");
                             fontLabel.setText("Font size:");
+                            buttonSmall.setText("Small");
+                            buttonMedium.setText("Medium");
+                            buttonLarge.setText("Large");
                             english = true;
                             danish = false;
                             german = false;
@@ -176,6 +186,9 @@ public class FXMLDocumentController implements Initializable {
                             phrases.setText("Sætninger");
                             langLabel.setText("Sprog:");
                             fontLabel.setText("Skriftstørrelse:");
+                            buttonSmall.setText("Lille");
+                            buttonMedium.setText("Medium");
+                            buttonLarge.setText("Stor");
                             english = false;
                             danish = true;
                             german = false;
@@ -204,6 +217,10 @@ public class FXMLDocumentController implements Initializable {
                             phrases.setText("Phrase");
                             langLabel.setText("Sprache:");
                             fontLabel.setText("Schriftgröße:");
+                            buttonSmall.setText("Klein");
+                            buttonMedium.setText("Mittel");
+                            buttonLarge.setText("Groß");
+
                             english = false;
                             danish = false;
                             german = true;
