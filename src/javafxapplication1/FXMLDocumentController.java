@@ -171,6 +171,10 @@ public class FXMLDocumentController implements Initializable {
                             buttonSmall.setText("Small");
                             buttonMedium.setText("Medium");
                             buttonLarge.setText("Large");
+                            phrase1.setText("I am hungry.");
+                            phrase2.setText("I want to go to the bathroom.");
+                            phrase3.setText("I need help with the computer.");
+                            phrasesLabel.setText("Activate buttons below to get help.");
                             english = true;
                             danish = false;
                             german = false;
@@ -497,7 +501,7 @@ public class FXMLDocumentController implements Initializable {
             }
         }, 2000);
     }
-@FXML
+    @FXML
     private void handleBackspace(Event event) {
         onKey = true;
         timer = new Timer();
@@ -506,12 +510,12 @@ public class FXMLDocumentController implements Initializable {
             public void run() {
                 if (onKey) {
                     keyBackspace.setOnAction(e -> {
-            KeyEvent press = new KeyEvent(keyBackspace, text, KeyEvent.KEY_PRESSED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
-            text.fireEvent(press);
-            KeyEvent typed = new KeyEvent(keyBackspace, text, KeyEvent.KEY_TYPED, "", "", KeyCode.UNDEFINED, false, false, false, false);
-            text.fireEvent(typed);
-            KeyEvent release = new KeyEvent(keyBackspace, text, KeyEvent.KEY_RELEASED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
-            text.fireEvent(release);
+                        KeyEvent press = new KeyEvent(keyBackspace, text, KeyEvent.KEY_PRESSED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
+                        text.fireEvent(press);
+                        KeyEvent typed = new KeyEvent(keyBackspace, text, KeyEvent.KEY_TYPED, "", "", KeyCode.UNDEFINED, false, false, false, false);
+                        text.fireEvent(typed);
+                        KeyEvent release = new KeyEvent(keyBackspace, text, KeyEvent.KEY_RELEASED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
+                        text.fireEvent(release);
                     });
                     timer.cancel();
                 }
@@ -533,7 +537,8 @@ public class FXMLDocumentController implements Initializable {
             }
         }, 2000);
     }
-@FXML
+
+    @FXML
     private void handleEnter(Event event) {
         onKey = true;
         timer = new Timer();
@@ -548,7 +553,6 @@ public class FXMLDocumentController implements Initializable {
         }, 2000);
     }
 
-    
     @FXML
     private void handleCapsLock(Event event) {
         onKey = true;
