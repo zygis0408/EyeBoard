@@ -141,6 +141,12 @@ public class FXMLDocumentController implements Initializable {
     private Button buttonDanish;
     @FXML
     private Button buttonGerman;
+    @FXML
+    private Button phrase1;
+    @FXML
+    private Button phrase2;
+    @FXML
+    private Button phrase3;
     private Timer timer;
 
     @FXML
@@ -186,6 +192,9 @@ public class FXMLDocumentController implements Initializable {
                         @Override
                         public void run() {
                             text.setFont(new Font(16.0));
+                            phrase1.setFont(new Font(12.0));
+                            phrase2.setFont(new Font(12.0));
+                            phrase3.setFont(new Font(12.0));
                             langLabel.setFont(new Font(12.0));
                             fontLabel.setFont(new Font(12.0));
                             keyCaps.setFont(new Font(12.0));
@@ -259,6 +268,9 @@ public class FXMLDocumentController implements Initializable {
                         @Override
                         public void run() {
                             text.setFont(new Font(19.0));
+                            phrase1.setFont(new Font(16.0));
+                            phrase2.setFont(new Font(16.0));
+                            phrase3.setFont(new Font(16.0));
                             langLabel.setFont(new Font(16.0));
                             fontLabel.setFont(new Font(16.0));
                             keyCaps.setFont(new Font(16.0));
@@ -332,6 +344,9 @@ public class FXMLDocumentController implements Initializable {
                         @Override
                         public void run() {
                             text.setFont(new Font(22.0));
+                            phrase1.setFont(new Font(19.0));
+                            phrase2.setFont(new Font(19.0));
+                            phrase3.setFont(new Font(19.0));
                             langLabel.setFont(new Font(19.0));
                             fontLabel.setFont(new Font(19.0));
                             keyCaps.setFont(new Font(19.0));
@@ -412,6 +427,9 @@ public class FXMLDocumentController implements Initializable {
                             buttonSmall.setText("Lille");
                             buttonMedium.setText("Medium");
                             buttonLarge.setText("Stor");
+                            phrase1.setText("Jeg er sulten.");
+                            phrase2.setText("Jeg ønsker at gå på toilettet.");
+                            phrase3.setText("Jeg har brug for hjælp med computeren.");
                             english = false;
                             danish = true;
                             german = false;
@@ -443,7 +461,9 @@ public class FXMLDocumentController implements Initializable {
                             buttonSmall.setText("Klein");
                             buttonMedium.setText("Mittel");
                             buttonLarge.setText("Groß");
-                            langLabel.setFont(new Font(19.0));
+                               phrase1.setText("Ich bin hungrig.");
+                            phrase2.setText("Ich will ins Badezimmer gehen.");
+                            phrase3.setText("Ich brauche Hilfe mit dem Computer.");
 
                             english = false;
                             danish = false;
