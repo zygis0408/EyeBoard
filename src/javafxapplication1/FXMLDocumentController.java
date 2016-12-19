@@ -16,6 +16,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 /**
  *
@@ -124,6 +126,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button keyCaps;
     @FXML
+    private Button keyBackspace;
+    @FXML
     private TextArea text;
     @FXML
     private AnchorPane keyboardPane;
@@ -161,6 +165,225 @@ public class FXMLDocumentController implements Initializable {
                             english = true;
                             danish = false;
                             german = false;
+                            timer.cancel();
+                        }
+
+                    });
+                }
+            }
+        }, 2000);
+    }
+
+    @FXML
+    private void handleFontSmall(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            text.setFont(new Font(16.0));
+                            langLabel.setFont(new Font(12.0));
+                            fontLabel.setFont(new Font(12.0));
+                            keyCaps.setFont(new Font(12.0));
+                            keyEnter.setFont(new Font(12.0));
+                            keyBackspace.setFont(new Font(12.0));
+                            keySpace.setFont(new Font(12.0));
+                            keyboard.setFont(new Font(12.0));
+                            settings.setFont(new Font(12.0));
+                            phrases.setFont(new Font(12.0));
+                            buttonSmall.setFont(new Font(12.0));
+                            buttonMedium.setFont(new Font(12.0));
+                            buttonLarge.setFont(new Font(12.0));
+                            buttonGerman.setFont(new Font(12.0));
+                            buttonEnglish.setFont(new Font(12.0));
+                            buttonDanish.setFont(new Font(12.0));
+                            num1.setFont(new Font(12.0));
+                            num2.setFont(new Font(12.0));
+                            num3.setFont(new Font(12.0));
+                            num4.setFont(new Font(12.0));
+                            num5.setFont(new Font(12.0));
+                            num6.setFont(new Font(12.0));
+                            num7.setFont(new Font(12.0));
+                            num8.setFont(new Font(12.0));
+                            num9.setFont(new Font(12.0));
+                            num0.setFont(new Font(12.0));
+                            keyA.setFont(new Font(12.0));
+                            keyB.setFont(new Font(12.0));
+                            keyC.setFont(new Font(12.0));
+                            keyD.setFont(new Font(12.0));
+                            keyE.setFont(new Font(12.0));
+                            keyF.setFont(new Font(12.0));
+                            keyG.setFont(new Font(12.0));
+                            keyH.setFont(new Font(12.0));
+                            keyI.setFont(new Font(12.0));
+                            keyJ.setFont(new Font(12.0));
+                            keyK.setFont(new Font(12.0));
+                            keyL.setFont(new Font(12.0));
+                            keyM.setFont(new Font(12.0));
+                            keyN.setFont(new Font(12.0));
+                            keyO.setFont(new Font(12.0));
+                            keyP.setFont(new Font(12.0));
+                            keyQ.setFont(new Font(12.0));
+                            keyR.setFont(new Font(12.0));
+                            keyS.setFont(new Font(12.0));
+                            keyT.setFont(new Font(12.0));
+                            keyU.setFont(new Font(12.0));
+                            keyV.setFont(new Font(12.0));
+                            keyW.setFont(new Font(12.0));
+                            keyX.setFont(new Font(12.0));
+                            keyY.setFont(new Font(12.0));
+                            keyZ.setFont(new Font(12.0));
+
+                            timer.cancel();
+                        }
+
+                    });
+                }
+            }
+        }, 2000);
+    }
+
+    @FXML
+    private void handleFontMedium(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            text.setFont(new Font(19.0));
+                            langLabel.setFont(new Font(16.0));
+                            fontLabel.setFont(new Font(16.0));
+                            keyCaps.setFont(new Font(16.0));
+                            keyEnter.setFont(new Font(16.0));
+                            keyBackspace.setFont(new Font(16.0));
+                            keySpace.setFont(new Font(16.0));
+                            keyboard.setFont(new Font(16.0));
+                            settings.setFont(new Font(16.0));
+                            phrases.setFont(new Font(16.0));
+                            buttonSmall.setFont(new Font(16.0));
+                            buttonMedium.setFont(new Font(16.0));
+                            buttonLarge.setFont(new Font(16.0));
+                            buttonGerman.setFont(new Font(16.0));
+                            buttonEnglish.setFont(new Font(16.0));
+                            buttonDanish.setFont(new Font(16.0));
+                            num1.setFont(new Font(16.0));
+                            num2.setFont(new Font(16.0));
+                            num3.setFont(new Font(16.0));
+                            num4.setFont(new Font(16.0));
+                            num5.setFont(new Font(16.0));
+                            num6.setFont(new Font(16.0));
+                            num7.setFont(new Font(16.0));
+                            num8.setFont(new Font(16.0));
+                            num9.setFont(new Font(16.0));
+                            num0.setFont(new Font(16.0));
+                            keyA.setFont(new Font(16.0));
+                            keyB.setFont(new Font(16.0));
+                            keyC.setFont(new Font(16.0));
+                            keyD.setFont(new Font(16.0));
+                            keyE.setFont(new Font(16.0));
+                            keyF.setFont(new Font(16.0));
+                            keyG.setFont(new Font(16.0));
+                            keyH.setFont(new Font(16.0));
+                            keyI.setFont(new Font(16.0));
+                            keyJ.setFont(new Font(16.0));
+                            keyK.setFont(new Font(16.0));
+                            keyL.setFont(new Font(16.0));
+                            keyM.setFont(new Font(16.0));
+                            keyN.setFont(new Font(16.0));
+                            keyO.setFont(new Font(16.0));
+                            keyP.setFont(new Font(16.0));
+                            keyQ.setFont(new Font(16.0));
+                            keyR.setFont(new Font(16.0));
+                            keyS.setFont(new Font(16.0));
+                            keyT.setFont(new Font(16.0));
+                            keyU.setFont(new Font(16.0));
+                            keyV.setFont(new Font(16.0));
+                            keyW.setFont(new Font(16.0));
+                            keyX.setFont(new Font(16.0));
+                            keyY.setFont(new Font(16.0));
+                            keyZ.setFont(new Font(16.0));
+
+                            timer.cancel();
+                        }
+
+                    });
+                }
+            }
+        }, 2000);
+    }
+
+    @FXML
+    private void handleFontLarge(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    javafx.application.Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            text.setFont(new Font(22.0));
+                            langLabel.setFont(new Font(19.0));
+                            fontLabel.setFont(new Font(19.0));
+                            keyCaps.setFont(new Font(19.0));
+                            keyEnter.setFont(new Font(19.0));
+                            keyBackspace.setFont(new Font(19.0));
+                            keySpace.setFont(new Font(19.0));
+                            keyboard.setFont(new Font(19.0));
+                            settings.setFont(new Font(19.0));
+                            phrases.setFont(new Font(19.0));
+                            buttonSmall.setFont(new Font(19.0));
+                            buttonMedium.setFont(new Font(19.0));
+                            buttonLarge.setFont(new Font(19.0));
+                            buttonGerman.setFont(new Font(19.0));
+                            buttonEnglish.setFont(new Font(19.0));
+                            buttonDanish.setFont(new Font(19.0));
+                            num1.setFont(new Font(19.0));
+                            num2.setFont(new Font(19.0));
+                            num3.setFont(new Font(19.0));
+                            num4.setFont(new Font(19.0));
+                            num5.setFont(new Font(19.0));
+                            num6.setFont(new Font(19.0));
+                            num7.setFont(new Font(19.0));
+                            num8.setFont(new Font(19.0));
+                            num9.setFont(new Font(19.0));
+                            num0.setFont(new Font(19.0));
+                            keyA.setFont(new Font(19.0));
+                            keyB.setFont(new Font(19.0));
+                            keyC.setFont(new Font(19.0));
+                            keyD.setFont(new Font(19.0));
+                            keyE.setFont(new Font(19.0));
+                            keyF.setFont(new Font(19.0));
+                            keyG.setFont(new Font(19.0));
+                            keyH.setFont(new Font(19.0));
+                            keyI.setFont(new Font(19.0));
+                            keyJ.setFont(new Font(19.0));
+                            keyK.setFont(new Font(19.0));
+                            keyL.setFont(new Font(19.0));
+                            keyM.setFont(new Font(19.0));
+                            keyN.setFont(new Font(19.0));
+                            keyO.setFont(new Font(19.0));
+                            keyP.setFont(new Font(19.0));
+                            keyQ.setFont(new Font(19.0));
+                            keyR.setFont(new Font(19.0));
+                            keyS.setFont(new Font(19.0));
+                            keyT.setFont(new Font(19.0));
+                            keyU.setFont(new Font(19.0));
+                            keyV.setFont(new Font(19.0));
+                            keyW.setFont(new Font(19.0));
+                            keyX.setFont(new Font(19.0));
+                            keyY.setFont(new Font(19.0));
+                            keyZ.setFont(new Font(19.0));
+
                             timer.cancel();
                         }
 
@@ -220,6 +443,7 @@ public class FXMLDocumentController implements Initializable {
                             buttonSmall.setText("Klein");
                             buttonMedium.setText("Mittel");
                             buttonLarge.setText("Groß");
+                            langLabel.setFont(new Font(19.0));
 
                             english = false;
                             danish = false;
