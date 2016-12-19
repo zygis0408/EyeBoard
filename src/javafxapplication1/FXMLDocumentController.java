@@ -15,13 +15,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 /**
  *
- * @author zygis
+ * @author zygis & dmnx
  */
 public class FXMLDocumentController implements Initializable {
 
@@ -147,6 +148,8 @@ public class FXMLDocumentController implements Initializable {
     private Button phrase2;
     @FXML
     private Button phrase3;
+    @FXML
+    private Label phrasesLabel;
     private Timer timer;
 
     @FXML
@@ -191,6 +194,7 @@ public class FXMLDocumentController implements Initializable {
                     javafx.application.Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
+                            phrasesLabel.setFont(new Font(12.0));
                             text.setFont(new Font(16.0));
                             phrase1.setFont(new Font(12.0));
                             phrase2.setFont(new Font(12.0));
@@ -268,6 +272,7 @@ public class FXMLDocumentController implements Initializable {
                         @Override
                         public void run() {
                             text.setFont(new Font(19.0));
+                            phrasesLabel.setFont(new Font(16.0));
                             phrase1.setFont(new Font(16.0));
                             phrase2.setFont(new Font(16.0));
                             phrase3.setFont(new Font(16.0));
@@ -344,6 +349,7 @@ public class FXMLDocumentController implements Initializable {
                         @Override
                         public void run() {
                             text.setFont(new Font(22.0));
+                            phrasesLabel.setFont(new Font(19.0));
                             phrase1.setFont(new Font(19.0));
                             phrase2.setFont(new Font(19.0));
                             phrase3.setFont(new Font(19.0));
@@ -430,6 +436,7 @@ public class FXMLDocumentController implements Initializable {
                             phrase1.setText("Jeg er sulten.");
                             phrase2.setText("Jeg ønsker at gå på toilettet.");
                             phrase3.setText("Jeg har brug for hjælp med computeren.");
+                            phrasesLabel.setText("Aktiver knapperne nedenunder for at få hjælp.");
                             english = false;
                             danish = true;
                             german = false;
@@ -461,10 +468,10 @@ public class FXMLDocumentController implements Initializable {
                             buttonSmall.setText("Klein");
                             buttonMedium.setText("Mittel");
                             buttonLarge.setText("Groß");
-                               phrase1.setText("Ich bin hungrig.");
+                            phrase1.setText("Ich bin hungrig.");
                             phrase2.setText("Ich will ins Badezimmer gehen.");
                             phrase3.setText("Ich brauche Hilfe mit dem Computer.");
-
+                            phrasesLabel.setText("Aktivieren Sie die Schaltflächen unten, um Hilfe zu erhalten.");
                             english = false;
                             danish = false;
                             german = true;
@@ -490,6 +497,27 @@ public class FXMLDocumentController implements Initializable {
             }
         }, 2000);
     }
+@FXML
+    private void handleBackspace(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    keyBackspace.setOnAction(e -> {
+            KeyEvent press = new KeyEvent(keyBackspace, text, KeyEvent.KEY_PRESSED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
+            text.fireEvent(press);
+            KeyEvent typed = new KeyEvent(keyBackspace, text, KeyEvent.KEY_TYPED, "", "", KeyCode.UNDEFINED, false, false, false, false);
+            text.fireEvent(typed);
+            KeyEvent release = new KeyEvent(keyBackspace, text, KeyEvent.KEY_RELEASED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
+            text.fireEvent(release);
+                    });
+                    timer.cancel();
+                }
+            }
+        }, 2000);
+    }
 
     @FXML
     private void handleSpace(Event event) {
@@ -505,7 +533,22 @@ public class FXMLDocumentController implements Initializable {
             }
         }, 2000);
     }
+@FXML
+    private void handleEnter(Event event) {
+        onKey = true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (onKey) {
+                    System.out.print(text.getText());
+                    timer.cancel();
+                }
+            }
+        }, 2000);
+    }
 
+    
     @FXML
     private void handleCapsLock(Event event) {
         onKey = true;
