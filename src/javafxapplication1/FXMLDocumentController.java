@@ -508,15 +508,8 @@ public class FXMLDocumentController implements Initializable {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                if (onKey) {
-                    keyBackspace.setOnAction(e -> {
-                        KeyEvent press = new KeyEvent(keyBackspace, text, KeyEvent.KEY_PRESSED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
-                        text.fireEvent(press);
-                        KeyEvent typed = new KeyEvent(keyBackspace, text, KeyEvent.KEY_TYPED, "", "", KeyCode.UNDEFINED, false, false, false, false);
-                        text.fireEvent(typed);
-                        KeyEvent release = new KeyEvent(keyBackspace, text, KeyEvent.KEY_RELEASED, "", "", KeyCode.BACK_SPACE, false, false, false, false);
-                        text.fireEvent(release);
-                    });
+                if (onKey && text.getLength()>0) {
+                    text.setText(text.getText(0, text.getLength()-1));
                     timer.cancel();
                 }
             }
